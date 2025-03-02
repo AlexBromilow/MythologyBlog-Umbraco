@@ -1,0 +1,39 @@
+﻿@using System.Threading
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor _contextAccessor;
+@inject Umbraco.Cms.Core.Web.IUmbracoContextAccessor _umbracoContextAccessor;
+@{
+    var currentPage = _umbracoContextAccessor.GetRequiredUmbracoContext().PublishedRequest?.PublishedContent;
+    // var settings = currentPage?.GetSiteSettings();
+    var context = _contextAccessor.GetRequiredHttpContext();
+    var showScripts = !context?.Request?.Query.ContainsKey("noscripts") ?? true;
+}
+<!DOCTYPE html>
+<html lang="@Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName">
+<head>
+@*     @if (showScripts)
+    {
+        <partial name="Layout/BlockScripts" model="settings?.TopHeadScripts" />
+    }
+    <partial name="Layout/StaticMetaTags" />
+    <partial name="Layout/DynamicMetaTags" /> *@
+
+
+@*     @if (showScripts)
+    {
+        <partial name="Layout/BlockScripts" model="settings?.BottomHeadScripts" />
+    } *@
+</head>
+<body>
+@*     @if (showScripts)
+    {
+        <partial name="Layout/BlockScripts" model="settings?.TopBodyScripts" />
+    } *@
+    @RenderBody()
+
+@*     @await Component.InvokeAsync("ReactEnvironment")
+    @if (showScripts)
+    {
+        <partial name="Layout/BlockScripts" model="settings?.BottomBodyScripts" />
+    } *@
+</body>
+</html>
