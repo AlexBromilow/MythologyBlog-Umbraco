@@ -1,0 +1,33 @@
+##
+## Umbraco CMS
+##
+
+# JSON schema files for appsettings.json
+/MythologyBlog.Web/appsettings-schema.json
+/MythologyBlog.Web/appsettings-schema.*.json
+
+# JSON schema file for umbraco-package.json
+/MythologyBlog.Web/umbraco-package-schema.json
+
+# Packages created from the backoffice (package.xml/package.zip)
+/MythologyBlog.Web/umbraco/Data/CreatedPackages/
+
+# Temp folder containing Examine indexes, NuCache, MediaCache, etc.
+/MythologyBlog.Web/umbraco/Data/TEMP/
+
+# SQLite database files
+/MythologyBlog.Web/umbraco/Data/*.sqlite.db
+/MythologyBlog.Web/umbraco/Data/*.sqlite.db-shm
+/MythologyBlog.Web/umbraco/Data/*.sqlite.db-wal
+
+# Log files
+/MythologyBlog.Web/umbraco/Logs/
+
+# Media files
+/MythologyBlog.Web/wwwroot/media/
+
+bin/
+obj/
+.vs
+
+ConnectionStrings.json
