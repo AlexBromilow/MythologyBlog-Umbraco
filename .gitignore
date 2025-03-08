@@ -31,3 +31,6 @@ obj/
 .vs
 
 ConnectionStrings.json
+MythologyBlog.Web/wwwroot/SiteFiles/ui/dist/
+
+MythologyBlog.Web/wwwroot/SiteFiles/ui/node_modules/

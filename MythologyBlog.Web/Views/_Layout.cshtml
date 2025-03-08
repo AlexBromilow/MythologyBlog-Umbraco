@@ -24,6 +24,7 @@
     } *@
 </head>
 <body>
+    <div id="app"></div>
 @*     @if (showScripts)
     {
         <partial name="Layout/BlockScripts" model="settings?.TopBodyScripts" />
@@ -35,5 +36,7 @@
     {
         <partial name="Layout/BlockScripts" model="settings?.BottomBodyScripts" />
     } *@
+
+    <script src="/SiteFiles/ui/dist/bundle.js"></script>
 </body>
 </html>
