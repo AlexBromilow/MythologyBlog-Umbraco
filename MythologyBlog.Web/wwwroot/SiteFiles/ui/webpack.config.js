@@ -6,7 +6,7 @@ module.exports = {
         rules: [
             {
                 test: /.(js|jsx|ts|tsx)$/,
-                exclude: /node_modules/,
+                exclude: [/node_modules/, /.config.mjs$/],
                 use: [
                     {
                         loader: "babel-loader",
@@ -20,7 +20,13 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.jsx', '.js']
+        extensions: ['.tsx', '.ts', '.jsx', '.js'],
+        alias: {
+            '@Widgets/*': path.resolve(__dirname, 'src/Components/Widgets/*'),
+            '@UI/*': path.resolve(__dirname, 'src/Components/UI/*'),
+            '@Lib/*': path.resolve(__dirname, 'src/Lib/*'),
+            '@Utils': path.resolve(__dirname, 'src/Lib/utils.tsx'),
+        }
     },
     output: {
         filename: 'bundle.js',

@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import AccordionWidget from '@Widgets/Accordion/Accordion.widget';
 
 
-const root = ReactDOM.createRoot(document.getElementById("app"));
-root.render(<App />)
+if (document.querySelector("div[data-component=accordion]")) {
+    const root = ReactDOM.createRoot(document.querySelector("div[data-component=accordion]"));
+    root.render(<AccordionWidget />)
+}
+
 
 

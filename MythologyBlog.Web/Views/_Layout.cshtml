@@ -10,6 +10,7 @@
 <!DOCTYPE html>
 <html lang="@Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName">
 <head>
+    <link rel="stylesheet" href="SiteFiles/ui/dist/main.css"/>
 @*     @if (showScripts)
     {
         <partial name="Layout/BlockScripts" model="settings?.TopHeadScripts" />
@@ -24,7 +25,7 @@
     } *@
 </head>
 <body>
-    <div id="app"></div>
+    <div data-component="accordion"></div>
 @*     @if (showScripts)
     {
         <partial name="Layout/BlockScripts" model="settings?.TopBodyScripts" />

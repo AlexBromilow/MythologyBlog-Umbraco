@@ -8,7 +8,13 @@
       "allowJs": true,
       "moduleResolution": "node",
       "sourceMap": true,
-      "allowSyntheticDefaultImports": true
+      "allowSyntheticDefaultImports": true,
+      "paths": {
+        "@Widgets/*": ["./src/Components/Widgets/*"],
+        "@UI/*": ["./src/Components/UI/*"],
+        "@Lib/*": ["./src/Lib/*"],
+        "@Utils": ["./src/Lib/utils.tsx"],
+      }
     },
     "include": ["src/**/*"]
   }

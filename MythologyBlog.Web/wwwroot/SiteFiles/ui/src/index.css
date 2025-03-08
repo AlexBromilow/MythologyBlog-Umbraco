@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@config "../tailwind.config.mjs";
+
+@plugin "tailwindcss-animate";
+
+@import './Styles/global.css';
