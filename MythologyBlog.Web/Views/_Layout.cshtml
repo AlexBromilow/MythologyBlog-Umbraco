@@ -23,12 +23,15 @@
         <partial name="Layout/BlockScripts" model="settings?.BottomHeadScripts" />
     } *@
     <link rel="stylesheet" href="~/Sitefiles/dist/main.css" />
+    <script src="~/Sitefiles/dist/main.js"></script>
+    <title>Lore & Disorder</title>
 </head>
 <body>
 @*     @if (showScripts)
     {
         <partial name="Layout/BlockScripts" model="settings?.TopBodyScripts" />
     } *@
+    <vc:dark-mode-toggle/>
     @RenderBody()
 
 @*     @await Component.InvokeAsync("ReactEnvironment")
