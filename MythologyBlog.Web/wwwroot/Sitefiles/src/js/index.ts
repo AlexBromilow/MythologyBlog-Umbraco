@@ -1,1 +1,4 @@
-alert("This is a test")
+import initDarkMode from './Dark Mode/dark-mode';
+
+
+initDarkMode();
